@@ -1512,7 +1512,7 @@
 				)
 			)
 		)
-		(symbol "PCM_Espressif:ESP32-S3-WROOM-2"
+		(symbol "PCM_Espressif:ESP32-S3-WROOM-1"
 			(pin_names
 				(offset 1.016)
 			)
@@ -1528,7 +1528,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "ESP32-S3-WROOM-2"
+			(property "Value" "ESP32-S3-WROOM-1"
 				(at -43.18 40.64 0)
 				(effects
 					(font
@@ -1537,7 +1537,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "PCM_Espressif:ESP32-S3-WROOM-2"
+			(property "Footprint" "PCM_Espressif:ESP32-S3-WROOM-1"
 				(at 2.54 -48.26 0)
 				(effects
 					(font
@@ -1546,7 +1546,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-2_datasheet_en.pdf"
+			(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf"
 				(at 2.54 -50.8 0)
 				(effects
 					(font
@@ -1564,8 +1564,8 @@
 					(hide yes)
 				)
 			)
-			(symbol "ESP32-S3-WROOM-2_0_0"
-				(text "ESP32-S3-WROOM-2"
+			(symbol "ESP32-S3-WROOM-1_0_0"
+				(text "ESP32-S3-WROOM-1"
 					(at -20.32 0 0)
 					(effects
 						(font
@@ -1933,10 +1933,10 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at -43.18 -35.56 0)
-					(length 2.54) hide
-					(name "NC"
+				(pin bidirectional line
+					(at -45.72 -30.48 0)
+					(length 2.54)
+					(name "SPIIO6/GPIO35/FSPID/SUBSPID"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1951,10 +1951,10 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at -43.18 -33.02 0)
-					(length 2.54) hide
-					(name "NC"
+				(pin bidirectional line
+					(at -45.72 -33.02 0)
+					(length 2.54)
+					(name "SPIIO7/GPIO36/FSPICLK/SUBSPICLK"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1987,10 +1987,10 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at -43.18 -30.48 0)
-					(length 2.54) hide
-					(name "NC"
+				(pin bidirectional line
+					(at -45.72 -35.56 0)
+					(length 2.54)
+					(name "SPIDQS/GPIO37/FSPIQ/SUBSPIQ"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2312,7 +2312,7 @@
 					)
 				)
 			)
-			(symbol "ESP32-S3-WROOM-2_0_1"
+			(symbol "ESP32-S3-WROOM-1_0_1"
 				(rectangle
 					(start -43.18 38.1)
 					(end 43.18 -38.1)
@@ -9390,6 +9390,193 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_Espressif:ESP32-S3-WROOM-1")
+		(at 231.14 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "138fb364-2bc7-4a7e-804a-ffdbfad29cb0")
+		(property "Reference" "U1"
+			(at 233.3341 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESP32-S3-WROOM-1"
+			(at 233.3341 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_Espressif:ESP32-S3-WROOM-1"
+			(at 233.68 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf"
+			(at 233.68 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2.4 GHz WiFi (802.11 b/g/n) and Bluetooth ® 5 (LE) module Built around ESP32S3 series of SoCs, Xtensa ® dualcore 32bit LX7 microprocessor Flash up to 16 MB, PSRAM up to 8 MB 36 GPIOs, rich set of peripherals Onboard PCB antenna"
+			(at 231.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "a7159e3a-c974-41ac-a50d-d3d3a61db0dc")
+		)
+		(pin "14"
+			(uuid "44fd62d3-3af8-4611-ba43-4b027808ede2")
+		)
+		(pin "3"
+			(uuid "81d868cd-f12b-4fc4-a022-16d9adad44f4")
+		)
+		(pin "29"
+			(uuid "ac4226a0-683d-4a7f-91d7-bbe25bf3d774")
+		)
+		(pin "35"
+			(uuid "04f0ba9f-4645-4886-827d-c0e32192b96c")
+		)
+		(pin "40"
+			(uuid "787cb590-2cf7-4c6c-bde9-ae5c4216817f")
+		)
+		(pin "33"
+			(uuid "bfd8aa9b-8cad-4f8c-bb56-9f2b81b6368e")
+		)
+		(pin "15"
+			(uuid "6654069e-d5f7-4e69-b8de-10845522918a")
+		)
+		(pin "18"
+			(uuid "0689808c-6d58-435e-a474-10110a8f6cd6")
+		)
+		(pin "19"
+			(uuid "25b17306-0ca8-4163-ba0f-62baa8c0d66c")
+		)
+		(pin "20"
+			(uuid "f5801f21-2c25-4c83-abaf-0a31f0ded13f")
+		)
+		(pin "21"
+			(uuid "8d64a399-47bb-4b8f-ad17-42df6504a079")
+		)
+		(pin "17"
+			(uuid "7641cb00-7521-4123-abfe-9aa7c47243d8")
+		)
+		(pin "24"
+			(uuid "cd9932f2-cb79-4b0e-8624-f58729c3583f")
+		)
+		(pin "11"
+			(uuid "8524df43-b1ac-45d8-9881-f7fb21ff4064")
+		)
+		(pin "26"
+			(uuid "5cae93fb-11ef-4943-b63f-1dd90806b18f")
+		)
+		(pin "30"
+			(uuid "2f0824fc-3d45-4e03-ac40-8d97b118a11c")
+		)
+		(pin "34"
+			(uuid "8861e7c3-7812-44e9-a90c-8b2ba31a7245")
+		)
+		(pin "27"
+			(uuid "4056748a-8fec-4af4-ac10-176ba7ae1d36")
+		)
+		(pin "37"
+			(uuid "4ce382c2-7f61-445c-8885-c316b3a32abc")
+		)
+		(pin "39"
+			(uuid "f35ffc27-df63-484f-b6ae-134e5b6c3561")
+		)
+		(pin "41"
+			(uuid "96ac12d1-7770-4528-93ba-9d89b683a1a2")
+		)
+		(pin "6"
+			(uuid "ad646f6c-2d4f-4ee9-ba70-9e35b4902070")
+		)
+		(pin "2"
+			(uuid "76187c16-4ce0-4545-a808-46d5d9940b84")
+		)
+		(pin "12"
+			(uuid "11a6792c-269c-41ef-97da-1a15662fcce4")
+		)
+		(pin "9"
+			(uuid "082360c6-023a-4baf-bc59-c865d35bb8ba")
+		)
+		(pin "5"
+			(uuid "e42fd99d-cead-4788-af43-a0ebc31a9b26")
+		)
+		(pin "16"
+			(uuid "a71dc439-aca5-44cc-b1a0-0c0dcb940a72")
+		)
+		(pin "8"
+			(uuid "4d07f56b-f0b0-43e5-986d-cda304ba46eb")
+		)
+		(pin "10"
+			(uuid "8d43383f-8fb3-499d-ae93-85735a0ebab5")
+		)
+		(pin "38"
+			(uuid "aee2c59b-742c-4068-818c-59058afba274")
+		)
+		(pin "25"
+			(uuid "bca43802-fa47-422c-b841-4ddd6c4481a1")
+		)
+		(pin "7"
+			(uuid "0e6fcfbc-2a54-4145-82a1-e179ee0f0fdf")
+		)
+		(pin "1"
+			(uuid "853a83e0-0a7a-472b-9fc1-4ef43b91af6d")
+		)
+		(pin "32"
+			(uuid "adee65c2-ecec-4bf7-91bc-d68dc83adad0")
+		)
+		(pin "36"
+			(uuid "14416ab9-d10d-48d5-93dd-13d3798bca1e")
+		)
+		(pin "13"
+			(uuid "cc339f0e-ee40-4e8d-a3f3-d7229c896d07")
+		)
+		(pin "22"
+			(uuid "15e03543-1cb2-4158-b6cd-e93baa7e3e2b")
+		)
+		(pin "28"
+			(uuid "0aa45c2a-531b-46b3-8431-ece4005ec186")
+		)
+		(pin "31"
+			(uuid "c02acf80-ea40-4d38-8d60-dac27aad816a")
+		)
+		(pin "23"
+			(uuid "d2f2bed4-f1e6-4b03-b10e-ac4c1df9b4f7")
+		)
+		(instances
+			(project ""
+				(path "/0da53b0a-8f1e-4a10-82c1-3eecfed721ae"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Trackball-rescue:GND-power")
 		(at 194.31 134.62 0)
 		(unit 1)
@@ -10260,193 +10447,6 @@
 			(project "Trackball"
 				(path "/0da53b0a-8f1e-4a10-82c1-3eecfed721ae"
 					(reference "#PWR0124")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_Espressif:ESP32-S3-WROOM-2")
-		(at 231.14 64.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5a8e72e1-d6a3-429e-a369-7bb92469f629")
-		(property "Reference" "U7"
-			(at 233.3341 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ESP32-S3-WROOM-2"
-			(at 233.3341 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_Espressif:ESP32-S3-WROOM-2"
-			(at 233.68 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-2_datasheet_en.pdf"
-			(at 233.68 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "2.4 GHz WiFi (802.11 b/g/n) and Bluetooth ® 5 (LE) module Built around ESP32S3 series of SoCs, Xtensa ® dualcore 32bit LX7 microprocessor Flash up to 16 MB, PSRAM up to 8 MB 36 GPIOs, rich set of peripherals Onboard PCB antenna"
-			(at 231.14 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "986a605c-b49e-4ce6-9412-4ce1dba98df6")
-		)
-		(pin "5"
-			(uuid "8977134b-6226-4c73-88a3-e7b4ac882a1a")
-		)
-		(pin "41"
-			(uuid "7244d0c5-b395-4cda-bf6e-07c67a297fa6")
-		)
-		(pin "2"
-			(uuid "10962b24-6653-4d91-a671-f53efaf07dd7")
-		)
-		(pin "32"
-			(uuid "6a311803-8d3f-4f70-9134-2e930194941e")
-		)
-		(pin "17"
-			(uuid "50945c1b-9d21-4556-8ca8-97918135eb78")
-		)
-		(pin "11"
-			(uuid "de3cf7cd-adfb-4789-9032-cd910281d646")
-		)
-		(pin "23"
-			(uuid "c0e56dd3-4c0a-439e-9cf9-246a4b5d6fe8")
-		)
-		(pin "12"
-			(uuid "ead26f85-f47e-4dc2-9931-3cab20ff2924")
-		)
-		(pin "25"
-			(uuid "66442574-1455-40fe-a9f1-524f29cb9ac0")
-		)
-		(pin "1"
-			(uuid "8d3b2c7c-f52c-4b88-bd67-9a8ea3ef8ad6")
-		)
-		(pin "27"
-			(uuid "68148af2-0018-4891-bd04-e1aac91ec5f5")
-		)
-		(pin "31"
-			(uuid "a984511a-accb-493d-805e-9dd61679f6ce")
-		)
-		(pin "33"
-			(uuid "78772981-cbc6-45a1-b5c3-0a7031afc26d")
-		)
-		(pin "30"
-			(uuid "54a3512f-0bc4-4a17-9713-62e974801d97")
-		)
-		(pin "36"
-			(uuid "385fab6e-6be7-40b2-ba97-fde7c8d2dc1f")
-		)
-		(pin "37"
-			(uuid "a7d91c8b-ae7e-40db-b79e-ed2e5180f973")
-		)
-		(pin "38"
-			(uuid "0a14787c-364d-418a-b413-014f694c6e7b")
-		)
-		(pin "8"
-			(uuid "7b0c7c9e-1250-4006-9c4a-8e103cc8811b")
-		)
-		(pin "10"
-			(uuid "ea736d23-4905-481a-9d9b-3a19999c34c8")
-		)
-		(pin "15"
-			(uuid "f274dfc7-d83c-480a-94c4-ed816d71c677")
-		)
-		(pin "34"
-			(uuid "b392b0f2-4e20-47a2-96ec-b6794e232a41")
-		)
-		(pin "19"
-			(uuid "5359e740-8811-47a0-b89e-ab588a121d3e")
-		)
-		(pin "6"
-			(uuid "b70d6e99-7682-4245-8700-3d7ca2665b7f")
-		)
-		(pin "24"
-			(uuid "496882bf-0603-4ef6-a46a-6412e3e651d4")
-		)
-		(pin "39"
-			(uuid "41e727d5-5c1d-439e-b3af-789e8aacd83c")
-		)
-		(pin "22"
-			(uuid "c2176184-aaae-44cc-adb7-c180d6cf8fa1")
-		)
-		(pin "18"
-			(uuid "b629ab47-af59-4360-8b89-a9fd02d059af")
-		)
-		(pin "21"
-			(uuid "3b345a3b-32c5-4408-999c-29306424c016")
-		)
-		(pin "29"
-			(uuid "f6b9ea59-6c81-4a16-a4b2-f2a726ecc8b3")
-		)
-		(pin "3"
-			(uuid "884b0add-a1c7-4045-9e20-7f9a750e15d6")
-		)
-		(pin "28"
-			(uuid "7f7f9510-97c4-479e-9ce8-50cd91d4632e")
-		)
-		(pin "35"
-			(uuid "ddaf1358-8493-45b7-b124-83293b04806a")
-		)
-		(pin "16"
-			(uuid "d66b2c1d-c467-4876-bc5b-12c0a5849717")
-		)
-		(pin "9"
-			(uuid "bbf7b7e6-c71b-4824-9ed2-574354f98bdb")
-		)
-		(pin "20"
-			(uuid "4563bcf0-fbdc-432f-b435-4ce4f661ed37")
-		)
-		(pin "13"
-			(uuid "ba425e17-eb69-4671-aa11-bcbe631d3790")
-		)
-		(pin "14"
-			(uuid "5a401b68-49c6-40e7-9fa1-062f2b280349")
-		)
-		(pin "26"
-			(uuid "0eccec8a-4a7d-48e2-8c7a-976f62df12de")
-		)
-		(pin "40"
-			(uuid "8e5a36b9-26e9-44fd-bfed-0f21cc64d8ab")
-		)
-		(pin "7"
-			(uuid "02c69678-e57f-4d59-af8c-4ea6bf84a7ff")
-		)
-		(instances
-			(project ""
-				(path "/0da53b0a-8f1e-4a10-82c1-3eecfed721ae"
-					(reference "U7")
 					(unit 1)
 				)
 			)
