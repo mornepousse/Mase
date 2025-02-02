@@ -1,4 +1,4 @@
-24507144577589074
+24491498951412496
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -65568,41 +65568,6 @@ Yellow 5381 Series LED
 0
 2
 2
-MaSe
-Alps-EC10E1220501
-
-
-0
-5
-4
-MaSe
-PMW3360
-
-
-0
-16
-16
-MaSe
-RollerEncoder_Panasonic_EVQWGD001
-
-
-0
-6
-6
-MaSe
-SW_Hotswap_Kailh_Choc_V1V2_1.00u
-Kailh Choc keyswitch V1V2 CPG1350 V1 CPG1353 V2 Hotswap Keycap 1.00u
-Kailh Choc Keyswitch Switch CPG1350 V1 CPG1353 V2 Hotswap Cutout Keycap 1.00u
-0
-2
-2
-MaSe
-SW_Micro_Switch
-Micro Switch
-Ultra Subminiature Basic Micro Switch D2F
-0
-3
-3
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -88591,27 +88556,6 @@ WiFi IEEE802.11 b/g/n
 0
 44
 44
-RP2040
-IDC-Header_2x04_P2.54mm_Vertical
-Through hole IDC box header, 2x04, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
-Through hole vertical IDC box header THT 2x04 2.54mm double row
-0
-8
-8
-RP2040
-RP2040-QFN-56
-QFN, 56 Pin (http://www.cypress.com/file/416486/download#page=40), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
-QFN DFN_QFN
-0
-70
-57
-RP2040
-SSD1306_OLED-0.91-128x32
-
-
-0
-14
-14
 Relay_SMD
 Relay_2P2T_10x6mm_TE_IMxxG
 Signal Relay, 10x6mm, 2 Form C, Gull Wings, https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7F108-98001%7FZ.1%7Fpdf%7FEnglish%7FENG_DS_108-98001_Z.1.pdf
@@ -90873,13 +90817,6 @@ rotary encoder illuminated switch vertical
 0
 9
 8
-SSD1306
-128x64OLED
-
-
-0
-4
-4
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
