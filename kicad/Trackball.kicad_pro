@@ -184,6 +184,7 @@
         0.0,
         0.254,
         0.4,
+        0.6,
         0.8,
         1.0
       ],
@@ -901,7 +902,7 @@
   "sheets": [
     [
       "0da53b0a-8f1e-4a10-82c1-3eecfed721ae",
-      "Root"
+      "Racine"
     ]
   ],
   "text_variables": {}
