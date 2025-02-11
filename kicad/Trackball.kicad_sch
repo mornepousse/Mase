@@ -6608,16 +6608,6 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 120.65) (xy 201.93 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c47157d8-11e7-4f88-910b-541d884288fd")
-	)
-	(wire
-		(pts
 			(xy 261.62 -76.2) (xy 267.97 -76.2)
 		)
 		(stroke
@@ -6765,16 +6755,6 @@
 			(type default)
 		)
 		(uuid "d647deb4-f2be-43f3-b876-903f29e08719")
-	)
-	(wire
-		(pts
-			(xy 179.07 130.81) (xy 179.07 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6da043b-9ca4-417e-9838-916e39ac1253")
 	)
 	(wire
 		(pts
@@ -7504,26 +7484,6 @@
 			)
 		)
 	)
-	(global_label "leftClick"
-		(shape input)
-		(at 179.07 130.81 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "28d6b678-d06b-401e-892e-80e794a237f9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.07 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "rightClick"
 		(shape input)
 		(at 245.11 -68.58 0)
@@ -7910,26 +7870,6 @@
 		(uuid "61071b21-33ba-4fc3-8571-70076ee382af")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 463.55 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "rightClick"
-		(shape input)
-		(at 201.93 120.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "614adf34-b98d-4f08-a40b-f70ce2935f1f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 201.93 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10558,71 +10498,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Trackball-rescue:GND-power")
-		(at 201.93 134.62 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3daeab06-355e-4e49-bfdf-654f3ee0f54b")
-		(property "Reference" "#PWR0136"
-			(at 201.93 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 202.057 139.0142 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 201.93 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 201.93 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "53e48c42-c8e4-4edd-a2b7-6b6047d21c59")
-		)
-		(instances
-			(project "Trackball"
-				(path "/0da53b0a-8f1e-4a10-82c1-3eecfed721ae"
-					(reference "#PWR0136")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 68.58 111.76 180)
 		(unit 1)
@@ -11271,140 +11146,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Trackball-rescue:GND-power")
-		(at 179.07 144.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "67c74839-4f54-454d-a32e-6d8ebd5cef82")
-		(property "Reference" "#PWR0135"
-			(at 179.07 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 179.197 149.1742 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 179.07 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 179.07 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 179.07 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "913b311f-9895-4167-90c8-ce8e0ab0d973")
-		)
-		(instances
-			(project "Trackball"
-				(path "/0da53b0a-8f1e-4a10-82c1-3eecfed721ae"
-					(reference "#PWR0135")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SL_Devices:Push_Button")
-		(at 179.07 139.7 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "684e2c40-4c62-4736-929b-6341032b95f4")
-		(property "Reference" "SW101"
-			(at 180.34 138.4299 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Push_Button"
-			(at 163.068 139.7 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "PCM_openinput:SW_Micro_Switch"
-			(at 182.245 139.827 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 179.07 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Common 6mmx6mm Push Button"
-			(at 179.07 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "abd5d8c7-3b50-4c92-9fa8-4e0cc83e2e76")
-		)
-		(pin "2"
-			(uuid "526fc806-892e-42b8-a757-acc5839ddedc")
-		)
-		(instances
-			(project "Trackball"
-				(path "/0da53b0a-8f1e-4a10-82c1-3eecfed721ae"
-					(reference "SW101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 267.97 -83.82 0)
 		(unit 1)
@@ -11628,76 +11369,6 @@
 			(project "Trackball"
 				(path "/0da53b0a-8f1e-4a10-82c1-3eecfed721ae"
 					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SL_Devices:Push_Button")
-		(at 201.93 129.54 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7631f8a8-303a-4dcd-b690-368f52c1355d")
-		(property "Reference" "SW104"
-			(at 203.2 128.2699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Push_Button"
-			(at 214.122 125.222 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "MaSe:SW_Micro_Switch"
-			(at 205.105 129.667 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Common 6mmx6mm Push Button"
-			(at 201.93 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "72ca70c8-1c66-49de-a333-a6e5201cb6ca")
-		)
-		(pin "2"
-			(uuid "6420d583-873c-489a-a664-fcff03b0bc0b")
-		)
-		(instances
-			(project "Trackball"
-				(path "/0da53b0a-8f1e-4a10-82c1-3eecfed721ae"
-					(reference "SW104")
 					(unit 1)
 				)
 			)
