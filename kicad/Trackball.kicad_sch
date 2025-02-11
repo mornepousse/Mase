@@ -5548,6 +5548,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 -81.28) (xy 151.13 -81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1142ac9d-1255-400e-a770-25017c904397")
+	)
+	(wire
+		(pts
 			(xy 67.31 -43.18) (xy 78.74 -43.18)
 		)
 		(stroke
@@ -6888,16 +6898,6 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 -25.4) (xy 242.57 -25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee3161ca-3123-4537-9cc2-f8a36dcd2cf2")
-	)
-	(wire
-		(pts
 			(xy 33.02 -57.15) (xy 33.02 -54.61)
 		)
 		(stroke
@@ -7043,9 +7043,28 @@
 		)
 		(uuid "ff159dd0-6d49-44b3-b8c7-a0c1bd6f9b24")
 	)
+	(label "TEMP_TP40"
+		(at 97.79 -170.18 0)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "0d78dd88-75be-4ae3-849b-978eddf42067")
+	)
+	(label "CS_DW01"
+		(at 138.43 -171.45 0)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f94f40a-50ee-44df-b664-bc2a3749c04c")
+	)
 	(label "G1"
 		(at 149.86 -167.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7056,7 +7075,6 @@
 	)
 	(label "OC"
 		(at 143.51 -158.75 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7067,7 +7085,6 @@
 	)
 	(label "S1"
 		(at 158.75 -168.91 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7076,9 +7093,38 @@
 		)
 		(uuid "3ef3abdf-8766-429d-9992-72904881ae56")
 	)
+	(label "VCC_DW01"
+		(at 157.48 -181.61 0)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "68e7179d-47e4-4cc8-b26b-421eaadfe223")
+	)
+	(label "OD_DW01"
+		(at 149.86 -171.45 0)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "988916cc-2acf-4e98-a940-c061d468d2d0")
+	)
+	(label "PROG_TP40"
+		(at 97.79 -166.37 0)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "dd14c0a9-478f-4975-92ea-5a744f16cc06")
+	)
 	(label "OUTGND"
 		(at 171.45 -134.62 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7089,7 +7135,6 @@
 	)
 	(label "G2"
 		(at 144.78 -143.51 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7098,9 +7143,19 @@
 		)
 		(uuid "ee468616-4426-474f-bed2-c7d0624c729d")
 	)
+	(label "OC_DW01"
+		(at 146.05 -171.45 0)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "fb95121c-2904-4341-a8d5-5914b28311b8")
+	)
 	(global_label "LED2"
 		(shape input)
-		(at 151.13 -25.4 180)
+		(at 151.13 -83.82 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7109,7 +7164,7 @@
 		)
 		(uuid "00e8678b-9209-4333-8d9c-67bd1d2ff58d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 151.13 -25.4 0)
+			(at 151.13 -83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7314,26 +7369,6 @@
 			)
 		)
 	)
-	(global_label "CenterClick"
-		(shape input)
-		(at 246.38 -53.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "159ab326-d648-4756-b22b-4d78e97e57dd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 246.38 -53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "EN"
 		(shape input)
 		(at 73.66 -86.36 180)
@@ -7416,6 +7451,26 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CenterClick"
+		(shape input)
+		(at 242.57 -58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1f42e8ce-573e-4d38-ac9e-707bbb7151f4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 242.57 -58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -8338,7 +8393,7 @@
 	)
 	(global_label "LED1"
 		(shape input)
-		(at 246.38 -25.4 0)
+		(at 143.51 -81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8347,7 +8402,7 @@
 		)
 		(uuid "b8ea2150-f9f7-40ed-90c1-8b4f43506ad5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 246.38 -25.4 0)
+			(at 143.51 -81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)

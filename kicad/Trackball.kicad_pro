@@ -102,7 +102,7 @@
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
-        "starved_thermal": "error",
+        "starved_thermal": "ignore",
         "text_height": "warning",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
@@ -488,7 +488,7 @@
         "name": "Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.4,
+        "track_width": 0.6,
         "via_diameter": 0.6,
         "via_drill": 0.35,
         "wire_width": 6
@@ -764,6 +764,26 @@
       {
         "netclass": "dPair",
         "pattern": "D-"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "BAT+"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "BAT-"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VCC_DW01"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "OC"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "G2"
       }
     ]
   },
@@ -902,7 +922,7 @@
   "sheets": [
     [
       "0da53b0a-8f1e-4a10-82c1-3eecfed721ae",
-      "Racine"
+      "Root"
     ]
   ],
   "text_variables": {}

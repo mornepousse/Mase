@@ -1,0 +1,7 @@
+Plugin v0.0.1 running on KiCad 8.0.8 and Python 3.13.1 (main, Dec  4 2024, 18:05:56) [GCC 14.2.1 20240910] on linux.
+Config file /home/mae/Documents/GitHub/Mase/kicad/Trackball.projinst.json not found. Creating new one.
+Valid Board found for /home/mae/Documents/GitHub/Mase/kicad/Trackball.kicad_sch
+0 sheet instances entries in /home/mae/Documents/GitHub/Mase/kicad/Trackball.kicad_sch
+Root item: <wx._dataview.TreeListItem object at 0x743a1b6faa80>
+No Valid Child board for 
+Instance is a dead branch: 
