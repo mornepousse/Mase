@@ -1,6 +1,6 @@
 # Mase
  Custom esp32 mouse.
- ![Front PCB](Images/front.png)
+ ![Front PCB](Images/IMG_20251215_160701.jpg)
  |index|References|Value|Footprint|Quantity|
  |:-|:--------|:-|:--|:-|
 |1| C101, C102, C106, C108, C110    |0.1u|C_0805_2012Metric|5|
