@@ -39,6 +39,17 @@
 
 #define PIN_LMB 16
 #define PIN_RMB 17
+#define PIN_CENTER_FUNCT_1_CLICK 36
+#define PIN_CENTER_FUNCT_2_CLICK 44
+#define PIN_RIGHT_CLICK 37
+#define PIN_RIGHT_FUNCT_CLICK 35
+#define PIN_LEFT_CLICK 21
+#define PIN_LEFT_FUNCT_CLICK 45
+#define PIN_MIDDLE_CLICK 38
+
+#define PIN_ENCODER_A 2
+#define PIN_ENCODER_B 42
+#define PIN_ENCODER_C 41
 
 // These IDs are bogus. If you want to distribute any hardware using this,
 // you will have to get real ones.
@@ -74,15 +85,12 @@ uint8_t const desc_hid_report[] = {
 //  0x85, 0x01,                 //     REPORT_ID (1)
     0x05, 0x09,                 //     USAGE_PAGE (Button)
     0x19, 0x01,                 //     USAGE_MINIMUM (1)
-    0x29, 0x03,                 //     USAGE_MAXIMUM (3)
+    0x29, 0x08,                 //     USAGE_MAXIMUM (8)
     0x15, 0x00,                 //     LOGICAL_MINIMUM (0)
     0x25, 0x01,                 //     LOGICAL_MAXIMUM (1)
-    0x95, 0x03,                 //     REPORT_COUNT (3)
+    0x95, 0x08,                 //     REPORT_COUNT (8)
     0x75, 0x01,                 //     REPORT_SIZE (1)
     0x81, 0x02,                 //     INPUT (Data,Var,Abs)
-    0x95, 0x01,                 //     REPORT_COUNT (1)
-    0x75, 0x05,                 //     REPORT_SIZE (5)
-    0x81, 0x03,                 //     INPUT (Const,Var,Abs)
     0x05, 0x01,                 //     USAGE_PAGE (Generic Desktop)
     0x09, 0x30,                 //     USAGE (X)
     0x09, 0x31,                 //     USAGE (Y)
@@ -134,7 +142,16 @@ void hid_task(void) {
     report.dx = dx;
     report.dy = -dy;
 
-    report.buttons = !gpio_get(PIN_LMB) ? 0x01 : 0x00 | !gpio_get(PIN_RMB) ? 0x02 : 0x00;
+    uint8_t buttons = 0;
+    if (!gpio_get(PIN_LMB) || !gpio_get(PIN_LEFT_CLICK)) buttons |= 0x01;
+    if (!gpio_get(PIN_RMB) || !gpio_get(PIN_RIGHT_CLICK)) buttons |= 0x02;
+    if (!gpio_get(PIN_MIDDLE_CLICK)) buttons |= 0x04;
+    if (!gpio_get(PIN_LEFT_FUNCT_CLICK)) buttons |= 0x08;
+    if (!gpio_get(PIN_RIGHT_FUNCT_CLICK)) buttons |= 0x10;
+    if (!gpio_get(PIN_CENTER_FUNCT_1_CLICK)) buttons |= 0x20;
+    if (!gpio_get(PIN_CENTER_FUNCT_2_CLICK)) buttons |= 0x40;
+
+    report.buttons = buttons;
 
     tud_hid_report(0, &report, sizeof(report));
 }
@@ -148,6 +165,13 @@ void pin_init(uint pin) {
 void pins_init(void) {
     pin_init(PIN_LMB);
     pin_init(PIN_RMB);
+    pin_init(PIN_CENTER_FUNCT_1_CLICK);
+    pin_init(PIN_CENTER_FUNCT_2_CLICK);
+    pin_init(PIN_RIGHT_CLICK);
+    pin_init(PIN_RIGHT_FUNCT_CLICK);
+    pin_init(PIN_LEFT_CLICK);
+    pin_init(PIN_LEFT_FUNCT_CLICK);
+    pin_init(PIN_MIDDLE_CLICK);
 }
 
 void report_init(void) {
