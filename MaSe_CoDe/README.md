@@ -1,69 +1,75 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-H21 | ESP32-P4 | ESP32-S2 | ESP32-S3 |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | --------- | -------- | -------- | -------- |
+# MaSe - Mouse Sensor Firmware
 
-# Blink Example
+**MaSe** est un firmware de souris haute performance pour l'ESP32-S3, utilisant le capteur optique PMW3389 et l'interface TinyUSB pour une communication HID rapide.
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+## 🚀 Fonctionnalités
 
-This example demonstrates how to blink a LED by using the GPIO driver or using the [led_strip](https://components.espressif.com/component/espressif/led_strip) library if the LED is addressable e.g. [WS2812](https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf). The `led_strip` library is installed via [component manager](main/idf_component.yml).
+*   **Capteur PMW3389** : Support complet via SPI avec lecture en mode "Burst" pour une latence minimale.
+*   **Polling Rate 1000Hz** : Boucle principale et tick FreeRTOS optimisés pour une réponse à 1ms.
+*   **DPI Ajustable** : Cycle entre les niveaux de DPI (400, 800, 1600, 3200, 6400) via un bouton dédié.
+*   **Molette de défilement** : Support d'encodeur rotatif.
+*   **Boutons Programmables** : Clic gauche, droit, milieu, et touches de fonction (ex: Touche Windows).
+*   **Indicateur d'État LED** : LED WS2812 (RGB) pour indiquer le mode de connexion (Vert = USB).
+*   **Architecture Modulaire** : Code séparé pour le capteur, la gestion des LEDs et la logique principale.
 
-## How to Use Example
+## 🛠 Matériel Requis
 
-Before project configuration and build, be sure to set the correct chip target using `idf.py set-target <chip_name>`.
+*   **Microcontrôleur** : ESP32-S3 (Testé sur DevKitM-1 / DevKitC).
+*   **Capteur** : PixArt PMW3389.
+*   **Composants** : Switchs pour les boutons, Encodeur rotatif, LED WS2812.
 
-### Hardware Required
+### 🔌 Pinout (Configuration par défaut)
 
-* A development board with normal LED or addressable LED on-board (e.g., ESP32-S3-DevKitC, ESP32-C6-DevKitC etc.)
-* A USB cable for Power supply and programming
+| Périphérique | Fonction | GPIO (ESP32-S3) |
+| :--- | :--- | :--- |
+| **PMW3389** | MISO | 7 |
+| | MOSI | 6 |
+| | SCLK | 5 |
+| | CS | 15 |
+| | MOTION | 4 |
+| **Boutons** | Clic Gauche (LMB) | 21 |
+| | Clic Droit (RMB) | 37 |
+| | Clic Molette (Middle) | 38 |
+| | DPI Switch | 44 |
+| | Touche Windows | 35 |
+| **Encodeur** | A | 2 |
+| | B | 42 |
+| | C (Commun/GND) | 41 |
+| **LED** | Data (WS2812) | 48 |
 
-See [Development Boards](https://www.espressif.com/en/products/devkits) for more information about it.
+## 📂 Structure du Projet
 
-### Configure the Project
-
-Open the project configuration menu (`idf.py menuconfig`).
-
-In the `Example Configuration` menu:
-
-* Select the LED type in the `Blink LED type` option.
-  * Use `GPIO` for regular LED
-  * Use `LED strip` for addressable LED
-* If the LED type is `LED strip`, select the backend peripheral
-  * `RMT` is only available for ESP targets with RMT peripheral supported
-  * `SPI` is available for all ESP targets
-* Set the GPIO number used for the signal in the `Blink GPIO number` option.
-* Set the blinking period in the `Blink period in ms` option.
-
-### Build and Flash
-
-Run `idf.py -p PORT flash monitor` to build, flash and monitor the project.
-
-(To exit the serial monitor, type ``Ctrl-]``.)
-
-See the [Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html) for full steps to configure and use ESP-IDF to build projects.
-
-## Example Output
-
-As you run the example, you will see the LED blinking, according to the previously defined period. For the addressable LED, you can also change the LED color by setting the `led_strip_set_pixel(led_strip, 0, 16, 16, 16);` (LED Strip, Pixel Number, Red, Green, Blue) with values from 0 to 255 in the [source file](main/blink_example_main.c).
-
-```text
-I (315) example: Example configured to blink addressable LED!
-I (325) example: Turning the LED OFF!
-I (1325) example: Turning the LED ON!
-I (2325) example: Turning the LED OFF!
-I (3325) example: Turning the LED ON!
-I (4325) example: Turning the LED OFF!
-I (5325) example: Turning the LED ON!
-I (6325) example: Turning the LED OFF!
-I (7325) example: Turning the LED ON!
-I (8325) example: Turning the LED OFF!
+```
+main/
+├── main.c           # Point d'entrée, boucle principale (USB, lecture capteur)
+├── pmw3389.c        # Driver du capteur (SPI, Burst read, SROM)
+├── pmw3389.h        # Définitions et prototypes du capteur
+├── led_status.c     # Gestion de la LED d'état (RMT)
+├── led_status.h     # Prototypes LED
+├── srom_pmw3389.h   # Firmware binaire du capteur
+└── CMakeLists.txt   # Configuration de build
 ```
 
-Note: The color order could be different according to the LED model.
+## 🔨 Compilation et Flash
 
-The pixel number indicates the pixel position in the LED strip. For a single LED, use 0.
+Ce projet utilise le framework **ESP-IDF**.
 
-## Troubleshooting
+1.  **Configurer la cible :**
+    ```bash
+    idf.py set-target esp32s3
+    ```
 
-* If the LED isn't blinking, check the GPIO or the LED type selection in the `Example Configuration` menu.
+2.  **Compiler :**
+    ```bash
+    idf.py build
+    ```
 
-For any technical queries, please open an [issue](https://github.com/espressif/esp-idf/issues) on GitHub. We will get back to you soon.
+3.  **Flasher et Monitorer :**
+    ```bash
+    idf.py -p /dev/ttyACM0 flash monitor
+    ```
+
+## 📝 Notes
+
+*   Le firmware du capteur (SROM) est chargé au démarrage. Assurez-vous que le fichier `srom_pmw3389.h` est présent.
+*   La fréquence FreeRTOS est configurée à 1000Hz pour assurer la fluidité du curseur.
