@@ -10,5 +10,6 @@ typedef enum {
 } connection_mode_t;
 
 extern volatile connection_mode_t current_mode;
+extern volatile bool led_enabled;
 
 void led_task(void *pvParameters);

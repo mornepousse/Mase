@@ -7,6 +7,7 @@
 
 static led_strip_handle_t led_strip;
 volatile connection_mode_t current_mode = MODE_USB;
+volatile bool led_enabled = true;
 
 static void configure_led(void)
 {
@@ -30,24 +31,28 @@ void led_task(void *pvParameters)
     int brightness = 0;
     int delta = 1;
     while (1) {
-        // Pulse logic
-        brightness += delta;
-        if (brightness >= 20) delta = -1; // Max brightness 20 (out of 255) is enough
-        if (brightness <= 0) {
-             delta = 1;
-             brightness = 0;
-        }
+        if (led_enabled) {
+            // Pulse logic
+            brightness += delta;
+            if (brightness >= 20) delta = -1; // Max brightness 20 (out of 255) is enough
+            if (brightness <= 0) {
+                delta = 1;
+                brightness = 0;
+            }
 
-        switch (current_mode) {
-            case MODE_USB:
-                led_strip_set_pixel(led_strip, 0, 0, brightness, 0); // Green
-                break;
-            case MODE_BT:
-                led_strip_set_pixel(led_strip, 0, 0, 0, brightness); // Blue
-                break;
-            case MODE_NRF24:
-                led_strip_set_pixel(led_strip, 0, brightness, brightness, 0); // Yellow (Red + Green)
-                break;
+            switch (current_mode) {
+                case MODE_USB:
+                    led_strip_set_pixel(led_strip, 0, 0, brightness, 0); // Green
+                    break;
+                case MODE_BT:
+                    led_strip_set_pixel(led_strip, 0, 0, 0, brightness); // Blue
+                    break;
+                case MODE_NRF24:
+                    led_strip_set_pixel(led_strip, 0, brightness, brightness, 0); // Yellow (Red + Green)
+                    break;
+            }
+        } else {
+            led_strip_clear(led_strip);
         }
         led_strip_refresh(led_strip);
         vTaskDelay(pdMS_TO_TICKS(40)); // Pulse speed

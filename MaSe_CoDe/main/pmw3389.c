@@ -243,14 +243,6 @@ void pmw3389_init(void)
 {
     esp_err_t ret;
 
-    spi_bus_config_t buscfg = {
-        .miso_io_num = PIN_NUM_MISO,
-        .mosi_io_num = PIN_NUM_MOSI,
-        .sclk_io_num = PIN_NUM_CLK,
-        .quadwp_io_num = -1,
-        .quadhd_io_num = -1,
-    };
-
     spi_device_interface_config_t devcfg = {
         .clock_speed_hz = 4000000, // 4 MHz
         .mode = 3,                 // PMW3389 = SPI mode 3
@@ -258,8 +250,9 @@ void pmw3389_init(void)
         .queue_size = 1,
     };
 
-    ret = spi_bus_initialize(SPI2_HOST, &buscfg, SPI_DMA_CH_AUTO);
-    ESP_ERROR_CHECK(ret);
+    // Bus initialization is now done in main.c
+    // ret = spi_bus_initialize(SPI2_HOST, &buscfg, SPI_DMA_CH_AUTO);
+    // ESP_ERROR_CHECK(ret);
 
     ret = spi_bus_add_device(SPI2_HOST, &devcfg, &spi);
     ESP_ERROR_CHECK(ret);

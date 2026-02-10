@@ -4,4 +4,5 @@
   (lib (name "MaSe")(type "KiCad")(uri "${KIPRJMOD}/PMW3360.pretty")(options "")(descr ""))
   (lib (name "SSD1306")(type "KiCad")(uri "${KIPRJMOD}/SSD1306.pretty")(options "")(descr ""))
   (lib (name "NRF")(type "KiCad")(uri "${KIPRJMOD}/NRF24L01_")(options "")(descr ""))
+  (lib (name "sensors_radios")(type "KiCad")(uri "${KIPRJMOD}/mysensors_radios.pretty")(options "")(descr ""))
 )
